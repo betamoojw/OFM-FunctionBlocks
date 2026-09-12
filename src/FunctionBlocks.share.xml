@@ -54,22 +54,22 @@
 								</TypeRestriction>
 							</ParameterType>
 
-							<ParameterType Id="%AID%_PT-FCBFormatterPlaceholderDptAndMore" Name="FCBFormatterPlaceholderDptAndMore">
+							<ParameterType Id="%AID%_PT-FCBFormatPlaceholder" Name="FCBFormatPlaceholder" op:headerExport="enum">
 								<TypeRestriction Base="Value" SizeInBit="8">
 									<!-- align for visibility in ETS -->
-									<Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
-									<Enumeration Text="1.*           1-Bit (0/1)" Value="10" Id="%ENID%" />
-									<Enumeration Text="5.*           8-Bit vorzeichenlos" Value="50" Id="%ENID%" />
-									<Enumeration Text="5.001       Prozent (0..100%)" Value="51" Id="%ENID%" />
-									<Enumeration Text="6.*           8-Bit vorzeichenbehaftet" Value="61" Id="%ENID%" />
-									<Enumeration Text="7.*           2-Byte vorzeichenlos" Value="70" Id="%ENID%" />
-									<Enumeration Text="8.*           2-Byte vorzeichenbehaftet" Value="80" Id="%ENID%" />
-									<Enumeration Text="9.*           2-Byte Gleitkommawert" Value="90" Id="%ENID%" />
-									<Enumeration Text="12.*         4-Byte vorzeichenlos" Value="120" Id="%ENID%" />
-									<Enumeration Text="13.*         4-Byte vorzeichenbehaftet" Value="130" Id="%ENID%" />
-									<Enumeration Text="14.*         4-Byte Gleitkommawert" Value="140" Id="%ENID%" />
-									<Enumeration Text="16.*        14-Byte Zeichenfolge" Value="160" Id="%ENID%" />
-									<Enumeration Text="Zeitfunktion"                           Value="199" Id="%ENID%" />
+									<Enumeration Text="Deaktiviert"                             Value="0"   Id="%ENID%" op:headerName="Disabled"      />
+									<Enumeration Text="1.*           1-Bit (0/1)"               Value="10"  Id="%ENID%" op:headerName="DPT_1_x"       />
+									<Enumeration Text="5.*           8-Bit vorzeichenlos"       Value="50"  Id="%ENID%" op:headerName="DPT_5_x"       />
+									<Enumeration Text="5.001       Prozent (0..100%)"           Value="51"  Id="%ENID%" op:headerName="DPT_5_001"     />
+									<Enumeration Text="6.*           8-Bit vorzeichenbehaftet"  Value="61"  Id="%ENID%" op:headerName="DPT_6_x"       />
+									<Enumeration Text="7.*           2-Byte vorzeichenlos"      Value="70"  Id="%ENID%" op:headerName="DPT_7_x"       />
+									<Enumeration Text="8.*           2-Byte vorzeichenbehaftet" Value="80"  Id="%ENID%" op:headerName="DPT_8_x"       />
+									<Enumeration Text="9.*           2-Byte Gleitkommawert"     Value="90"  Id="%ENID%" op:headerName="DPT_9_x"       />
+									<Enumeration Text="12.*         4-Byte vorzeichenlos"       Value="120" Id="%ENID%" op:headerName="DPT_12_x"      />
+									<Enumeration Text="13.*         4-Byte vorzeichenbehaftet"  Value="130" Id="%ENID%" op:headerName="DPT_13_x"      />
+									<Enumeration Text="14.*         4-Byte Gleitkommawert"      Value="140" Id="%ENID%" op:headerName="DPT_14_x"      />
+									<Enumeration Text="16.*        14-Byte Zeichenfolge"        Value="160" Id="%ENID%" op:headerName="DPT_16_x"      />
+									<Enumeration Text="Zeitfunktion"                            Value="199" Id="%ENID%" op:headerName="TimeFunctions" />
 								</TypeRestriction>
 							</ParameterType>
 

@@ -503,40 +503,40 @@ void TextFormatBlock::updateTextKo(bool forceSend)
 
         switch (ParamFCB_CHFormatIn1)
         {
-            case 10: // Bit
+            case PT_FCBFormatPlaceholder::DPT_1_x:
                 placeholder[input-1] = formatBit(input, (bool)getKo(koNr).value(DPT_Switch), koNr);
                 break;
-            case 50:
+            case PT_FCBFormatPlaceholder::DPT_5_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_1_Ucount), koNr);
                 break;
-            case 51:
+            case PT_FCBFormatPlaceholder::DPT_5_001:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Scaling), koNr);
                 break;
-            case 61:
+            case PT_FCBFormatPlaceholder::DPT_6_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_1_Count), koNr);
                 break;
-            case 70:
+            case PT_FCBFormatPlaceholder::DPT_7_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_2_Ucount), koNr);
                 break;
-            case 80:
+            case PT_FCBFormatPlaceholder::DPT_8_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_2_Count), koNr);
                 break;
-            case 90:
+            case PT_FCBFormatPlaceholder::DPT_9_x:
                 placeholder[input-1] = formatFloat(input, (double)getKo(koNr).value(DPT_Value_Temp), koNr);
                 break;
-            case 120:
+            case PT_FCBFormatPlaceholder::DPT_12_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_4_Ucount), koNr);
                 break;
-            case 130:
+            case PT_FCBFormatPlaceholder::DPT_13_x:
                 placeholder[input-1] = formatDecimal(input, (int64_t)getKo(koNr).value(DPT_Value_4_Count), koNr);
                 break;
-            case 140:
+            case PT_FCBFormatPlaceholder::DPT_14_x:
                 placeholder[input-1] = formatFloat(input, (double)getKo(koNr).value(DPT_Value_Amplitude), koNr);
                 break;
-            case 160:
+            case PT_FCBFormatPlaceholder::DPT_16_x:
                 placeholder[input-1] = (const char*)getKo(koNr).value(DPT_String_8859_1);
                 break;
-            case 199:
+            case PT_FCBFormatPlaceholder::TimeFunctions:
                 placeholder[input-1] = formatTime(input);
                 break;
         }

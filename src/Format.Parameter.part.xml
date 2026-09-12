@@ -13,7 +13,7 @@
 
                 <!-- Input N -->
                 <!-- Input Type -->
-                <Parameter Offset="%ParamOffset+0%" BitOffset="0" Id="%AID%_UP-%TT%%CC%%ParamIdBase+310%" Name="CH%C%FormatIn%ParamN%" ParameterType="%AID%_PT-FCBFormatterPlaceholderDptAndMore" Text="Typ" Value="0" />
+                <Parameter Offset="%ParamOffset+0%" BitOffset="0" Id="%AID%_UP-%TT%%CC%%ParamIdBase+310%" Name="CH%C%FormatIn%ParamN%"            ParameterType="%AID%_PT-FCBFormatPlaceholder"       Text="Typ" Value="0" />
                 <!-- Numeric parameter -->
                 <!-- Rounding float -->
                 <Parameter Offset="%ParamOffset+1%" BitOffset="0" Id="%AID%_UP-%TT%%CC%%ParamIdBase+311%" Name="CH%C%FormatRoundFloat%ParamN%" ParameterType="%AID%_PT-FCBFormatRoundFloat" Text="Runden" Value="0" op:nowarn="true" />
