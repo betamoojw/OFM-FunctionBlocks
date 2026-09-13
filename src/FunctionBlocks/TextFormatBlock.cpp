@@ -13,10 +13,10 @@ TextFormatBlock::TextFormatBlock(uint8_t channelIndex)
     _textBlockOn = ParamFCB_CHFormatOnStr;
     _textBlockOff = ParamFCB_CHFormatOffStr;
 
-    _hasContinousTime = (ParamFCB_CHFormatIn1 == 199 && ParamFCB_CHFormatUpdate1 == 0)
-                     || (ParamFCB_CHFormatIn2 == 199 && ParamFCB_CHFormatUpdate2 == 0)
-                     || (ParamFCB_CHFormatIn3 == 199 && ParamFCB_CHFormatUpdate3 == 0)
-                     || (ParamFCB_CHFormatIn4 == 199 && ParamFCB_CHFormatUpdate4 == 0);
+    _hasContinousTime = (ParamFCB_CHFormatIn1 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate1 == 0)
+                     || (ParamFCB_CHFormatIn2 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate2 == 0)
+                     || (ParamFCB_CHFormatIn3 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate3 == 0)
+                     || (ParamFCB_CHFormatIn4 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate4 == 0);
 }
 /*************************** IMPORTANT **************************/
 /*                                                              */
@@ -58,7 +58,7 @@ void TextFormatBlock::loop()
             // update for time only
             // update time placeholders continously
     
-            if (ParamFCB_CHFormatIn1 == 199 && ParamFCB_CHFormatUpdate1 == 0)
+            if (ParamFCB_CHFormatIn1 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate1 == 0)
             {
                 updatePlaceholder(input);
                 updated = true;
@@ -75,7 +75,7 @@ void TextFormatBlock::readInputKos()
     for (int input = 1; input <= FCB_TEXT_FORMAT_MAX_INPUTS; input++)
     {
         // Note: time type has no KO, or use KO as trigger
-        if (ParamFCB_CHFormatIn1 != 0 && ParamFCB_CHFormatIn1 != 199)
+        if (ParamFCB_CHFormatIn1 != PT_FCBFormatPlaceholder::Disabled && ParamFCB_CHFormatIn1 != PT_FCBFormatPlaceholder::TimeFunctions)
         {
             auto& ko = getKo(0);
             if (!ko.initialized())
@@ -96,7 +96,7 @@ void TextFormatBlock::handleKo(GroupObject& ko)
     {
         // update time placeholders by trigger
         const int input = index + 1;
-        if (ParamFCB_CHFormatIn1 == 199 && ParamFCB_CHFormatUpdate1 == 1 && (bool)ko.value(DPT_Switch))
+        if (ParamFCB_CHFormatIn1 == PT_FCBFormatPlaceholder::TimeFunctions && ParamFCB_CHFormatUpdate1 == 1 && (bool)ko.value(DPT_Switch))
         {
             updatePlaceholder(input);
         }
