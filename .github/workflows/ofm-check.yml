@@ -12,7 +12,7 @@ jobs:
       # ofm: ${{ github.event.repository.name }}
       # Note: use ${{ github.ref_name }} from OFM-repo
       # ofm_ref: ${{ github.ref_name }}
-      ofm_prefix: IW
+      ofm_prefix: FCB
       oam: OAM-Homematic
       # oam_ref: v1dev # Note: use ${{ github.ref_name }} from OFM-repo
       target: Release
